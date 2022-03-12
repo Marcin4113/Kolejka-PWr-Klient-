@@ -14,9 +14,9 @@ class ClientConnection
 		SOCKET m_connection;
 		SOCKADDR_IN m_address;
 		
-		const char* m_IP_address;
-		const int m_port;
-		MainWindow* m_window;
+		const char* m_IP_address; //adres IP serwera
+		const int m_port; //port do komunikacji z serwerem
+		MainWindow* m_window; //potrzebne w celu modyfikacji elementów w oknie
 };
 
 #endif // CLIENT_CONNECTION_H

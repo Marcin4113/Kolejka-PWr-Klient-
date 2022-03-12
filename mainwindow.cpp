@@ -21,6 +21,8 @@ void MainWindow::add_elem(const char *str)
 void MainWindow::disable_elem(const int &pos)
 {
 	QListWidgetItem* item = ui->listWidget->item(pos);
-	item->setFlags(item->flags() & ~Qt::ItemIsEnabled);
+	
+	if (item != nullptr)
+		item->setFlags(item->flags() & ~Qt::ItemIsEnabled);
 }
 

@@ -11,14 +11,19 @@ CONFIG += c++14 console
 SOURCES += \
     client_connection.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    queuewindow.cpp \
+    workerslot.cpp
 
 HEADERS += \
     client_connection.h \
-    mainwindow.h
+    mainwindow.h \
+    queuewindow.h \
+    workerslot.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    queuewindow.ui
 
 TRANSLATIONS += \
     Kolejka_PWr_pl_PL.ts
