@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include <QLabel>
-#include "workerslot.h"
+#include "workplaceslot.h"
 
 namespace Ui {
 	class QueueWindow;
@@ -23,8 +23,9 @@ class QueueWindow : public QDialog
 		
 		int m_screen_width; //wysokość ekranu
 		int m_screen_height; //szerokość ekranu
-		std::vector<WorkerSlot> m_worker_slots; //wektor stanowisk Pań z dziekanatu
-		//QLabel** m_worker_labels;
+		float m_screen_scale; //skala ekranu względem oryginału
+		float m_slots_scale; //skala obrazków stanowisk
+		std::vector<WorkplaceSlot> m_workplaces; //wektor stanowisk Pań z dziekanatu
 };
 
 #endif // QUEUEWINDOW_H

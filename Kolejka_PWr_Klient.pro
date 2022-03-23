@@ -13,13 +13,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     queuewindow.cpp \
-    workerslot.cpp
+    workplaceslot.cpp
 
 HEADERS += \
     client_connection.h \
     mainwindow.h \
     queuewindow.h \
-    workerslot.h
+    workplaceslot.h
 
 FORMS += \
     mainwindow.ui \
