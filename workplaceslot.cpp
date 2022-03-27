@@ -7,6 +7,7 @@ WorkplaceSlot::WorkplaceSlot(int p_x, int p_y, float p_scale, int p_workplace_nu
 	m_y = p_y;
 	m_scale = p_scale;
 	m_workplace_num = p_workplace_number;
+	m_occupied_by = 0;
 	m_status = SlotStatus::NOT_CONNECTED;
 	
 	//ładowanie obrazka stanowiska
@@ -14,6 +15,21 @@ WorkplaceSlot::WorkplaceSlot(int p_x, int p_y, float p_scale, int p_workplace_nu
 	{
 		throw std::invalid_argument("Cannot load image 'data\\slot_not_connected.png'");
 	}
+}
+
+SlotStatus WorkplaceSlot::get_status()
+{
+	return m_status;
+}
+
+int WorkplaceSlot::get_workplace_number()
+{
+	return m_workplace_num;
+}
+
+int WorkplaceSlot::get_occupied_by()
+{
+	return m_occupied_by;
 }
 
 void WorkplaceSlot::set_x(int p_x)
@@ -70,6 +86,11 @@ void WorkplaceSlot::set_status(SlotStatus p_status)
 			}
 			break;
 	}
+}
+
+void WorkplaceSlot::set_occupied_by(unsigned short p_occupied_by)
+{
+	m_occupied_by = p_occupied_by;
 }
 
 bool WorkplaceSlot::load_img(const char* path, QWidget* p_parent_window)

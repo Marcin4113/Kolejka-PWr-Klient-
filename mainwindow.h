@@ -14,9 +14,6 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-	
-	void add_elem(const char* str);
-	void disable_elem(const int& pos);
     
 private:
     Ui::MainWindow *ui;

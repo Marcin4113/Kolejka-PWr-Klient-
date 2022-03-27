@@ -2,23 +2,23 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++14 console
+CONFIG += c++17 console
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    client_connection.cpp \
     main.cpp \
     mainwindow.cpp \
     queuewindow.cpp \
+    server_connection.cpp \
     workplaceslot.cpp
 
 HEADERS += \
-    client_connection.h \
     mainwindow.h \
     queuewindow.h \
+    server_connection.h \
     workplaceslot.h
 
 FORMS += \
@@ -26,7 +26,7 @@ FORMS += \
     queuewindow.ui
 
 TRANSLATIONS += \
-    Kolejka_PWr_pl_PL.ts
+    Kolejka_PWr_Telewizor_pl_PL.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

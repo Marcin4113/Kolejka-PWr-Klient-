@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>386</width>
-    <height>433</height>
+    <width>300</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -37,10 +37,10 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
-      <width>341</width>
-      <height>381</height>
+      <x>10</x>
+      <y>20</y>
+      <width>280</width>
+      <height>360</height>
      </rect>
     </property>
     <property name="styleSheet">

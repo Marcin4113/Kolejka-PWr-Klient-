@@ -45,6 +45,19 @@ QueueWindow::QueueWindow(QWidget *parent) :
 	#endif
 	
 	load_worker_slots();
+	
+	m_workplaces.at(3).set_status(SlotStatus::FREE);
+	m_workplaces.at(3).set_occupied_by(3);
+	m_workplaces.at(4).set_status(SlotStatus::FREE);
+	m_workplaces.at(4).set_occupied_by(4);
+	m_workplaces.at(5).set_status(SlotStatus::FREE);
+	m_workplaces.at(5).set_occupied_by(5);
+	m_workplaces.at(6).set_status(SlotStatus::BREAK);
+	m_workplaces.at(6).set_occupied_by(6);
+	m_workplaces.at(7).set_status(SlotStatus::BUSY);
+	m_workplaces.at(7).set_occupied_by(7);
+	m_workplaces.at(8).set_status(SlotStatus::BUSY);
+	m_workplaces.at(8).set_occupied_by(9);
 }
 
 QueueWindow::~QueueWindow()
@@ -121,4 +134,9 @@ void QueueWindow::load_worker_slots()
 	{
 		std::cerr<<"Can't open file 'properties.conf'! Error: "<<strerror(errno)<<std::endl;
 	}
+}
+
+std::vector<WorkplaceSlot> &QueueWindow::get_workplaces()
+{
+	return m_workplaces;
 }

@@ -17,7 +17,11 @@ class QueueWindow : public QDialog
 		explicit QueueWindow(QWidget *parent = nullptr);
 		~QueueWindow();
 		
-		void load_worker_slots();
+		void load_worker_slots(); //wczytuje informacje o stanowiskach (położenie i numer) z pliku
+		
+		//gettery
+		std::vector<WorkplaceSlot>& get_workplaces();
+		
 	private:
 		Ui::QueueWindow *ui;
 		
